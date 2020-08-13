@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="header">
+        <img class="logo" src="./images/logo.svg" alt="Logo of Basel Apparel">
+      </div>
+    </div>
+  </header>
+  <picture class="hero">
+    <source srcset="./images/hero-desktop.jpg" media="(min-width: 768px)">
+    <img src="./images/hero-mobile.jpg" alt="The model of base apparel">
+  </picture>
+  <main>
+    <div class="wrapper">
+      <div class="content-container">
+        <h1 class="title"><span>We're</span><br>coming<br>soon</h1>
+        <p class="copy">Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form class="form" onsubmit="handleSubmit">
+          <input class="input" placeholder="Email Address" type="text" id="">
+          <input class="btn-submit" type="submit" value="">
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault()
+      const input = document.querySelector('.input')
+      const form = document.querySelector('.btn-submit')
+      console.log(input.value)
+      form.classList.add('form-error')
+    }
+  </script>
+</body>
+</html>

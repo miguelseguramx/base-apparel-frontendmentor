@@ -1,0 +1,171 @@
+:root{
+  --primary: #ce9898;
+  --orange: #f96262;
+  --black:  #413a3a;
+  --linerarGray: 135deg, from #ffffff, to #fff5f5;
+  --primaryGradient: linear-gradient(127deg, #F8BFBF 0%, #EE8B8B 100%);
+  --linerarGray: 135deg, from #f8bfbf, to #ee8c8c;
+  --font: 'Josefin Sans', sans-serif;
+}
+
+body{
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  background-image: linear-gradient(165deg, #FFFFFF 0%, #FFF4F4 100%);
+}
+
+.header{
+  padding: 1.86em 2em 1.85em;
+}
+
+.logo{
+  height: 1.31rem;
+}
+
+.content-container{
+  padding: 4rem 2rem;
+}
+
+.title{
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 10.83px;
+  color:var(--dark);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.title span{
+  font-weight: 300;
+  color: var(--primary);
+}
+
+.copy{
+  text-align: center;
+  letter-spacing: 0px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 1.3em 0 0;
+}
+
+.form{
+  margin: 2rem 0;
+  display: flex;
+  border-radius: 28px;
+  border: 1px solid var(--primary);
+  position: relative;
+}
+
+.input{
+  flex-grow: 1;
+  border: none;
+  border-radius: 28px;
+  padding: 16px 0 17px 24px;
+  box-sizing: border-box;
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) 50%;
+}
+
+.form-error .input{
+  background-image: url(./images/icon-error.svg);
+}
+
+.form-error::after{
+  color: var(--orange);
+  content: "Please provide a valid email";
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 24px;
+}
+
+::-webkit-input-placeholder,
+::placeholder {
+  color: var(--primary);
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.btn-submit{
+  width: 4rem;
+  height: 3rem;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:  url(./images/icon-arrow.svg), var(--primaryGradient);
+  box-shadow: 0px 15px 20px #c66e6e3f;
+  border-radius: 28px;
+  outline: none;
+}
+
+@media(min-width: 768px){
+  .wrapper{
+    max-width: 1240px;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+  }
+  .header{
+    padding: 4rem 2rem;
+  }
+  .logo{
+    height: 33px;
+  }
+  .hero{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hero img{
+    height: 100vh;
+    vertical-align: bottom;
+  }
+  .title{
+    font-size: 64px;
+    letter-spacing: 17.32px;
+    line-height: 70px;
+    text-align: left;
+  }
+  .copy{
+    margin-left: 1px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    max-width: 445px;
+  }
+  .form{
+    margin-top: 40px;
+    max-width: 445px;
+  }
+  .btn-submit{
+    width: 100px;
+    height: 56px;
+  }
+  .input{
+    padding: 20px 32px;
+    font-size: 16px;
+  }
+  .btn-submit:hover{
+    background-image:  url(./images/icon-arrow.svg);
+    background-color: #FFFFFF80;
+    box-shadow: 0px 15px 20px #C66E6E3F;
+  }
+  .form-error::after{
+    top: calc(100% + 16px);
+    left: 32px;
+  }
+}
+
