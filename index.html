@@ -26,9 +26,12 @@
         <h1 class="title"><span>We're</span><br>coming<br>soon</h1>
         <p class="copy">Hello fellow shoppers! We're currently building our new fashion store.
       Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form class="form">
-          <input class="input" placeholder="Email Address" type="text" id="">
-          <input class="btn-submit" type="button" value="">
+        <form class="form" title="introduce tu email">
+          <label>
+            <span>Introduce your email</span>
+            <input class="input" name="email" placeholder="Email Address" type="text" id="email">
+          </label>
+          <input class="btn-submit" type="submit" value="" name="send email" id="">
         </form>
       </div>
     </div>
@@ -37,7 +40,8 @@
     const btn = document.querySelector('.btn-submit')
     const form = document.querySelector('.form')
 
-    btn.addEventListener('click', () => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
       const input = document.querySelector('.input')
       const value = input.value
       const match = value.match(/\S+@\S+\.\S+/gi)

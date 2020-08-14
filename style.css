@@ -1,5 +1,5 @@
 :root{
-  --primary: #ce9898;
+  --primary: #ce9797;
   --orange: #f96262;
   --black:  #413a3a;
   --linerarGray: 135deg, from #ffffff, to #fff5f5;
@@ -56,7 +56,7 @@ body{
   margin: 2rem 0;
   display: flex;
   border-radius: 28px;
-  border: 1px solid var(--orange);
+  border: 1px solid var(--primary);
   position: relative;
 }
 
@@ -92,7 +92,7 @@ body{
 
 ::-webkit-input-placeholder,
 ::placeholder {
-  color: var(--orange);
+  color: var(--primary);
   font-weight: 600;
 }
 
