@@ -94,7 +94,6 @@ body{
 ::placeholder {
   color: var(--primary);
   font-weight: 600;
-  opacity: 0.5;
 }
 
 .btn-submit{
@@ -160,7 +159,7 @@ body{
   }
   .btn-submit:hover{
     background-image:  url(./images/icon-arrow.svg);
-    background-color: #FFFFFF80;
+    background-color: #C66E6E3F;
     box-shadow: 0px 15px 20px #C66E6E3F;
   }
   .form-error::after{

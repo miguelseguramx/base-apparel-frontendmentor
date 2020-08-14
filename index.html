@@ -26,21 +26,31 @@
         <h1 class="title"><span>We're</span><br>coming<br>soon</h1>
         <p class="copy">Hello fellow shoppers! We're currently building our new fashion store.
       Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form class="form" onsubmit="handleSubmit">
+        <form class="form">
           <input class="input" placeholder="Email Address" type="text" id="">
-          <input class="btn-submit" type="submit" value="">
+          <input class="btn-submit" type="button" value="">
         </form>
       </div>
     </div>
   </main>
   <script>
-    function handleSubmit(e) {
-      e.preventDefault()
+    const btn = document.querySelector('.btn-submit')
+    const form = document.querySelector('.form')
+
+    btn.addEventListener('click', () => {
       const input = document.querySelector('.input')
-      const form = document.querySelector('.btn-submit')
-      console.log(input.value)
-      form.classList.add('form-error')
-    }
+      const value = input.value
+      const match = value.match(/\S+@\S+\.\S+/gi)
+      if (value === '' || !match) {
+        form.classList.add('form-error')
+        setTimeout(() => {
+          form.classList.remove('form-error')
+        }, 4000)
+        return
+      }
+      input.value = ''
+      alert(`Email ${value} registrado.`)
+    })
   </script>
 </body>
 </html>
