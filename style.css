@@ -15,6 +15,10 @@ body{
   background-image: linear-gradient(165deg, #FFFFFF 0%, #FFF4F4 100%);
 }
 
+label span{
+  display: none;
+}
+
 .header{
   padding: 1.86em 2em 1.85em;
 }
@@ -60,8 +64,11 @@ body{
   position: relative;
 }
 
-.input{
+.form label{
   flex-grow: 1;
+}
+
+.input{
   border: none;
   border-radius: 28px;
   padding: 16px 0 17px 24px;
