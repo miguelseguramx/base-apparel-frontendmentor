@@ -1,5 +1,6 @@
 :root{
   --primary: #ce9797;
+  --primaryOpacity: hsla(0, 36%, 70%, 0.5);
   --orange: #f96262;
   --black:  #413a3a;
   --linerarGray: 135deg, from #ffffff, to #fff5f5;
@@ -60,7 +61,7 @@ label span{
   margin: 2rem 0;
   display: flex;
   border-radius: 28px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--primaryOpacity);
   position: relative;
 }
 
@@ -100,7 +101,7 @@ label span{
 
 ::-webkit-input-placeholder,
 ::placeholder {
-  color: var(--primary);
+  color: var(--primaryOpacity);
   font-weight: 600;
 }
 
