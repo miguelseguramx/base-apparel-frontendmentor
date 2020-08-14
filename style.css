@@ -69,6 +69,7 @@ label span{
 }
 
 .input{
+  width: 100%;
   border: none;
   border-radius: 28px;
   padding: 16px 0 17px 24px;
